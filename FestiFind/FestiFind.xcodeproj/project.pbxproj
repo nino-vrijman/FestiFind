@@ -23,6 +23,7 @@
 		3E08FDAE1CC7BAF9007393CB /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDAD1CC7BAF9007393CB /* QRCode.swift */; };
 		3E08FDB01CC7BC04007393CB /* EventGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDAF1CC7BC04007393CB /* EventGroup.swift */; };
 		3E08FDB21CC7BE41007393CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDB11CC7BE41007393CB /* Event.swift */; };
+		3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDED1CC7F947007393CB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		3E08FDAD1CC7BAF9007393CB /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		3E08FDAF1CC7BC04007393CB /* EventGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGroup.swift; sourceTree = "<group>"; };
 		3E08FDB11CC7BE41007393CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3E08FDED1CC7F947007393CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				3E08FDA01CC7B025007393CB /* Classes */,
 				3E08FD721CC7AF62007393CB /* AppDelegate.swift */,
 				3E08FD741CC7AF62007393CB /* ViewController.swift */,
+				3E08FDED1CC7F947007393CB /* LoginViewController.swift */,
 				3E08FD761CC7AF62007393CB /* Main.storyboard */,
 				3E08FD791CC7AF62007393CB /* Assets.xcassets */,
 				3E08FD7B1CC7AF62007393CB /* LaunchScreen.storyboard */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */,
 				3E08FD751CC7AF62007393CB /* ViewController.swift in Sources */,
 				3E08FDB21CC7BE41007393CB /* Event.swift in Sources */,
 				3E08FDAC1CC7BA89007393CB /* EventLocation.swift in Sources */,
