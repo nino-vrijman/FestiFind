@@ -14,6 +14,15 @@
 		3E08FD7D1CC7AF62007393CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E08FD7B1CC7AF62007393CB /* LaunchScreen.storyboard */; };
 		3E08FD881CC7AF62007393CB /* FestiFindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FD871CC7AF62007393CB /* FestiFindTests.swift */; };
 		3E08FD931CC7AF62007393CB /* FestiFindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FD921CC7AF62007393CB /* FestiFindUITests.swift */; };
+		3E08FDA21CC7B16E007393CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDA11CC7B16E007393CB /* User.swift */; };
+		3E08FDA41CC7B2BA007393CB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDA31CC7B2BA007393CB /* Location.swift */; };
+		3E08FDA61CC7B652007393CB /* SafePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDA51CC7B652007393CB /* SafePoint.swift */; };
+		3E08FDA81CC7B808007393CB /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDA71CC7B808007393CB /* UserLocation.swift */; };
+		3E08FDAA1CC7B840007393CB /* GatherPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDA91CC7B840007393CB /* GatherPoint.swift */; };
+		3E08FDAC1CC7BA89007393CB /* EventLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDAB1CC7BA89007393CB /* EventLocation.swift */; };
+		3E08FDAE1CC7BAF9007393CB /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDAD1CC7BAF9007393CB /* QRCode.swift */; };
+		3E08FDB01CC7BC04007393CB /* EventGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDAF1CC7BC04007393CB /* EventGroup.swift */; };
+		3E08FDB21CC7BE41007393CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDB11CC7BE41007393CB /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		3E08FD8E1CC7AF62007393CB /* FestiFindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestiFindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E08FD921CC7AF62007393CB /* FestiFindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestiFindUITests.swift; sourceTree = "<group>"; };
 		3E08FD941CC7AF62007393CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E08FDA11CC7B16E007393CB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E08FDA31CC7B2BA007393CB /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3E08FDA51CC7B652007393CB /* SafePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafePoint.swift; sourceTree = "<group>"; };
+		3E08FDA71CC7B808007393CB /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		3E08FDA91CC7B840007393CB /* GatherPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatherPoint.swift; sourceTree = "<group>"; };
+		3E08FDAB1CC7BA89007393CB /* EventLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLocation.swift; sourceTree = "<group>"; };
+		3E08FDAD1CC7BAF9007393CB /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		3E08FDAF1CC7BC04007393CB /* EventGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGroup.swift; sourceTree = "<group>"; };
+		3E08FDB11CC7BE41007393CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,7 @@
 		3E08FD711CC7AF62007393CB /* FestiFind */ = {
 			isa = PBXGroup;
 			children = (
+				3E08FDA01CC7B025007393CB /* Classes */,
 				3E08FD721CC7AF62007393CB /* AppDelegate.swift */,
 				3E08FD741CC7AF62007393CB /* ViewController.swift */,
 				3E08FD761CC7AF62007393CB /* Main.storyboard */,
@@ -123,6 +142,22 @@
 				3E08FD941CC7AF62007393CB /* Info.plist */,
 			);
 			path = FestiFindUITests;
+			sourceTree = "<group>";
+		};
+		3E08FDA01CC7B025007393CB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3E08FDA11CC7B16E007393CB /* User.swift */,
+				3E08FDA31CC7B2BA007393CB /* Location.swift */,
+				3E08FDA51CC7B652007393CB /* SafePoint.swift */,
+				3E08FDA71CC7B808007393CB /* UserLocation.swift */,
+				3E08FDA91CC7B840007393CB /* GatherPoint.swift */,
+				3E08FDAB1CC7BA89007393CB /* EventLocation.swift */,
+				3E08FDAD1CC7BAF9007393CB /* QRCode.swift */,
+				3E08FDAF1CC7BC04007393CB /* EventGroup.swift */,
+				3E08FDB11CC7BE41007393CB /* Event.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E08FD751CC7AF62007393CB /* ViewController.swift in Sources */,
+				3E08FDB21CC7BE41007393CB /* Event.swift in Sources */,
+				3E08FDAC1CC7BA89007393CB /* EventLocation.swift in Sources */,
+				3E08FDAA1CC7B840007393CB /* GatherPoint.swift in Sources */,
+				3E08FDA41CC7B2BA007393CB /* Location.swift in Sources */,
 				3E08FD731CC7AF62007393CB /* AppDelegate.swift in Sources */,
+				3E08FDAE1CC7BAF9007393CB /* QRCode.swift in Sources */,
+				3E08FDA81CC7B808007393CB /* UserLocation.swift in Sources */,
+				3E08FDA61CC7B652007393CB /* SafePoint.swift in Sources */,
+				3E08FDB01CC7BC04007393CB /* EventGroup.swift in Sources */,
+				3E08FDA21CC7B16E007393CB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
