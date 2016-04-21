@@ -25,7 +25,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLogin_Touch(sender: UIButton) {
         let username = tfUsername.text!
-        let password = tfPassword.text!
+        //let password = tfPassword.text!
+        let password = "testerino"
         if (logIn(username, password: password)) {
             let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("MenuViewController")
             self.showViewController(vc as! MenuViewController, sender: vc)
