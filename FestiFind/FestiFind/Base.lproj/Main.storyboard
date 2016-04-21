@@ -111,6 +111,9 @@
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="136" y="176" width="528" height="51"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="2cn-oD-7K3" kind="show" id="O0U-Oz-dth"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJq-JL-Qa6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -145,6 +148,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrF-8S-Cxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2721" y="399"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="von-vf-8Ec">
+            <objects>
+                <viewController id="2cn-oD-7K3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8fh-hy-538"/>
+                        <viewControllerLayoutGuide type="bottom" id="BYj-dL-3uJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPz-RG-bHC">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kub-cb-PXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3522" y="394.5"/>
         </scene>
         <!--Join Group View Controller-->
         <scene sceneID="bGD-E7-SmF">
