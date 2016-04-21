@@ -28,6 +28,7 @@
 		F5A4425E1CC8EE1B000AB1CA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */; };
 		F5A442601CC8F258000AB1CA /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A4425F1CC8F258000AB1CA /* GPSViewController.swift */; };
 		F5CA603D1CC8FF6500D04327 /* JoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA603C1CC8FF6500D04327 /* JoinGroupViewController.swift */; };
+		F5CA60431CC901CC00D04327 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA60421CC901CC00D04327 /* BannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F5A4425F1CC8F258000AB1CA /* GPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		F5CA603C1CC8FF6500D04327 /* JoinGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinGroupViewController.swift; sourceTree = "<group>"; };
+		F5CA60421CC901CC00D04327 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */,
 				F5A4425F1CC8F258000AB1CA /* GPSViewController.swift */,
 				F5CA603C1CC8FF6500D04327 /* JoinGroupViewController.swift */,
+				F5CA60421CC901CC00D04327 /* BannerViewController.swift */,
 			);
 			path = FestiFind;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CA60431CC901CC00D04327 /* BannerViewController.swift in Sources */,
 				3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */,
 				F5A442601CC8F258000AB1CA /* GPSViewController.swift in Sources */,
 				3E08FD751CC7AF62007393CB /* ViewController.swift in Sources */,

@@ -149,22 +149,51 @@
             </objects>
             <point key="canvasLocation" x="2721" y="399"/>
         </scene>
-        <!--View Controller-->
+        <!--Banner View Controller-->
         <scene sceneID="von-vf-8Ec">
             <objects>
-                <viewController id="2cn-oD-7K3" sceneMemberID="viewController">
+                <viewController id="2cn-oD-7K3" customClass="BannerViewController" customModule="FestiFind" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8fh-hy-538"/>
                         <viewControllerLayoutGuide type="bottom" id="BYj-dL-3uJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oPz-RG-bHC">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="CNe-Sb-mam">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="91" width="613" height="701"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown copy" translatesAutoresizingMaskIntoConstraints="NO" id="zcN-v9-clQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="91" width="613" height="701"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CNe-Sb-mam"/>
+                                <exclude reference="zcN-v9-clQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="CNe-Sb-mam"/>
+                                <include reference="zcN-v9-clQ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="ivArrow" destination="zcN-v9-clQ" id="XN6-EP-usj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kub-cb-PXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3522" y="394.5"/>
+            <point key="canvasLocation" x="3529.5" y="351"/>
         </scene>
         <!--Join Group View Controller-->
         <scene sceneID="bGD-E7-SmF">
@@ -278,4 +307,8 @@
             <point key="canvasLocation" x="487.5" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowDown" width="800" height="800"/>
+        <image name="arrowDown copy" width="800" height="800"/>
+    </resources>
 </document>
