@@ -16,7 +16,7 @@ public class User {
     var userLocation:UserLocation
     
     init (id : Int, name : String, username : String, userLocation : UserLocation) {
-        self.id = 0
+        self.id = id
         self.name = name
         self.username = username
         self.userLocation = userLocation
