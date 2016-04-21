@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         
         NSLog("Data sent with post: %@", post);
         
-        let url:NSURL = NSURL(string:"https://www.ninovrijman.nl/cgi-bin/jsonlogin_festifind.php")!
+        let url:NSURL = NSURL(string:"https://www.ninovrijman.nl/cgi-bin/jsonlogin_festifind_returns_user.php")!
         
         let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
         
@@ -96,9 +96,18 @@ class LoginViewController: UIViewController {
                 {
                     NSLog("Login SUCCESS");
                     
+                    let userId:Int = jsonData.valueForKey("id") as! Int
+                    let userName:String = jsonData.valueForKey("name") as! String
+                    let userUsername:String = jsonData.valueForKey("username") as! String
+                    let userLat:Double = jsonData.valueForKey("location_lat") as! Double
+                    let userLon:Double = jsonData.valueForKey("location_lon") as! Double
+                    
+                    let loggedInUser = User(id: userId, name: userName, username: userUsername, userLocation: UserLocation(longitude: userLon, latitude: userLat))
+                    
+                    let jsonLoggedInUser:String = JSONSerializer.toJson(loggedInUser)
+                    
                     let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                    prefs.setObject(username, forKey: "USERNAME")
-                    prefs.setInteger(1, forKey: "ISLOGGEDIN")
+                    prefs.setObject(jsonLoggedInUser, forKey: "LOGGEDINUSER")
                     prefs.synchronize()
                     return true;
                 } else {

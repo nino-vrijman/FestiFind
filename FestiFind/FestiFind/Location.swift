@@ -9,10 +9,10 @@
 import Foundation
 
 public class Location {
-    var longitude:Int
-    var latitude:Int
+    var longitude:Double
+    var latitude:Double
     
-    init (longitude : Int, latitude : Int) {
+    init (longitude : Double, latitude : Double) {
         self.longitude = longitude
         self.latitude = latitude
     }

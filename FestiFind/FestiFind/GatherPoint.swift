@@ -10,7 +10,7 @@ import Foundation
 
 public class GatherPoint : Location {
     
-    override init(longitude : Int, latitude : Int) {
+    override init(longitude : Double, latitude : Double) {
         super.init(longitude: longitude, latitude: latitude)
     }
 }

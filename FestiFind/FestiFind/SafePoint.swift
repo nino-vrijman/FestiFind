@@ -11,7 +11,7 @@ import Foundation
 public class SafePoint : Location {
     var alertTimeMinutes:Int
     
-    init(longitude : Int, latitude : Int, alertTimeMinutes : Int) {
+    init(longitude : Double, latitude : Double, alertTimeMinutes : Int) {
         self.alertTimeMinutes = alertTimeMinutes
         super.init(longitude: longitude, latitude: latitude)
     }

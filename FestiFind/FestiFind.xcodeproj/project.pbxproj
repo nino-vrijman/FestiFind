@@ -24,6 +24,7 @@
 		3E08FDB01CC7BC04007393CB /* EventGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDAF1CC7BC04007393CB /* EventGroup.swift */; };
 		3E08FDB21CC7BE41007393CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDB11CC7BE41007393CB /* Event.swift */; };
 		3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDED1CC7F947007393CB /* LoginViewController.swift */; };
+		3E0C9A211CC8D757009B99BD /* JsonSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3E08FDAF1CC7BC04007393CB /* EventGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGroup.swift; sourceTree = "<group>"; };
 		3E08FDB11CC7BE41007393CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3E08FDED1CC7F947007393CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonSerializer.swift; path = "../../../JsonSerializerSwift-master/JsonSerializerSwift/JsonSerializer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				3E08FDA01CC7B025007393CB /* Classes */,
 				3E08FD721CC7AF62007393CB /* AppDelegate.swift */,
+				3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */,
 				3E08FD741CC7AF62007393CB /* ViewController.swift */,
 				3E08FDED1CC7F947007393CB /* LoginViewController.swift */,
 				3E08FD761CC7AF62007393CB /* Main.storyboard */,
@@ -305,6 +308,7 @@
 				3E08FDA81CC7B808007393CB /* UserLocation.swift in Sources */,
 				3E08FDA61CC7B652007393CB /* SafePoint.swift in Sources */,
 				3E08FDB01CC7BC04007393CB /* EventGroup.swift in Sources */,
+				3E0C9A211CC8D757009B99BD /* JsonSerializer.swift in Sources */,
 				3E08FDA21CC7B16E007393CB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +534,7 @@
 				3E08FD991CC7AF62007393CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E08FD9A1CC7AF62007393CB /* Build configuration list for PBXNativeTarget "FestiFindTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				3E08FD9C1CC7AF62007393CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E08FD9D1CC7AF62007393CB /* Build configuration list for PBXNativeTarget "FestiFindUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +552,7 @@
 				3E08FD9F1CC7AF62007393CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
