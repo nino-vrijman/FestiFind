@@ -105,10 +105,11 @@ class LoginViewController: UIViewController {
                     
                     let loggedInUser = User(id: userId, name: userName, username: userUsername, userLocation: UserLocation(longitude: userLon, latitude: userLat))
                     
-                    let jsonLoggedInUser:String = JSONSerializer.toJson(loggedInUser)
-                    
+                    //let jsonLoggedInUser:String = JSONSerializer.toJson(loggedInUser)
+ 
                     let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                    prefs.setObject(jsonLoggedInUser, forKey: "LOGGEDINUSER")
+                    //prefs.setObject(jsonLoggedInUser, forKey: "LOGGEDINUSER")
+                    prefs.setInteger(loggedInUser.id, forKey: "LOGGEDINUSERID")
                     prefs.synchronize()
                     return true;
                 } else {

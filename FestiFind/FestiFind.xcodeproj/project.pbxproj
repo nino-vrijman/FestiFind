@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E08FD731CC7AF62007393CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FD721CC7AF62007393CB /* AppDelegate.swift */; };
 		3E08FD751CC7AF62007393CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FD741CC7AF62007393CB /* ViewController.swift */; };
-		3E08FD781CC7AF62007393CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E08FD761CC7AF62007393CB /* Main.storyboard */; };
 		3E08FD7A1CC7AF62007393CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E08FD791CC7AF62007393CB /* Assets.xcassets */; };
 		3E08FD7D1CC7AF62007393CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E08FD7B1CC7AF62007393CB /* LaunchScreen.storyboard */; };
 		3E08FD881CC7AF62007393CB /* FestiFindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FD871CC7AF62007393CB /* FestiFindTests.swift */; };
@@ -25,6 +24,8 @@
 		3E08FDB21CC7BE41007393CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDB11CC7BE41007393CB /* Event.swift */; };
 		3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDED1CC7F947007393CB /* LoginViewController.swift */; };
 		3E0C9A211CC8D757009B99BD /* JsonSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */; };
+		3E0C9A5F1CC908D1009B99BD /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C9A5E1CC908D1009B99BD /* GroupViewController.swift */; };
+		3E0C9A611CC90B7B009B99BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0C9A601CC90B7B009B99BD /* Main.storyboard */; };
 		F5A4425E1CC8EE1B000AB1CA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */; };
 		F5A442601CC8F258000AB1CA /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A4425F1CC8F258000AB1CA /* GPSViewController.swift */; };
 		F5CA603D1CC8FF6500D04327 /* JoinGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA603C1CC8FF6500D04327 /* JoinGroupViewController.swift */; };
@@ -52,7 +53,6 @@
 		3E08FD6F1CC7AF62007393CB /* FestiFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestiFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E08FD721CC7AF62007393CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E08FD741CC7AF62007393CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3E08FD771CC7AF62007393CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E08FD791CC7AF62007393CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E08FD7C1CC7AF62007393CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E08FD7E1CC7AF62007393CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 		3E08FDB11CC7BE41007393CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3E08FDED1CC7F947007393CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializer.swift; sourceTree = "<group>"; };
+		3E0C9A5E1CC908D1009B99BD /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		3E0C9A601CC90B7B009B99BD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F5A4425F1CC8F258000AB1CA /* GPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		F5CA603C1CC8FF6500D04327 /* JoinGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinGroupViewController.swift; sourceTree = "<group>"; };
@@ -132,14 +134,18 @@
 				3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */,
 				3E08FD741CC7AF62007393CB /* ViewController.swift */,
 				3E08FDED1CC7F947007393CB /* LoginViewController.swift */,
-				3E08FD761CC7AF62007393CB /* Main.storyboard */,
 				3E08FD791CC7AF62007393CB /* Assets.xcassets */,
+				3E0C9A601CC90B7B009B99BD /* Main.storyboard */,
 				3E08FD7B1CC7AF62007393CB /* LaunchScreen.storyboard */,
 				3E08FD7E1CC7AF62007393CB /* Info.plist */,
 				F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */,
 				F5A4425F1CC8F258000AB1CA /* GPSViewController.swift */,
 				F5CA603C1CC8FF6500D04327 /* JoinGroupViewController.swift */,
+<<<<<<< HEAD
+				3E0C9A5E1CC908D1009B99BD /* GroupViewController.swift */,
+=======
 				F5CA60421CC901CC00D04327 /* BannerViewController.swift */,
+>>>>>>> master
 			);
 			path = FestiFind;
 			sourceTree = "<group>";
@@ -282,9 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0C9A611CC90B7B009B99BD /* Main.storyboard in Resources */,
 				3E08FD7D1CC7AF62007393CB /* LaunchScreen.storyboard in Resources */,
 				3E08FD7A1CC7AF62007393CB /* Assets.xcassets in Resources */,
-				3E08FD781CC7AF62007393CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +322,7 @@
 				3E08FDB21CC7BE41007393CB /* Event.swift in Sources */,
 				F5CA603D1CC8FF6500D04327 /* JoinGroupViewController.swift in Sources */,
 				F5A4425E1CC8EE1B000AB1CA /* MenuViewController.swift in Sources */,
+				3E0C9A5F1CC908D1009B99BD /* GroupViewController.swift in Sources */,
 				3E08FDAC1CC7BA89007393CB /* EventLocation.swift in Sources */,
 				3E08FDAA1CC7B840007393CB /* GatherPoint.swift in Sources */,
 				3E08FDA41CC7B2BA007393CB /* Location.swift in Sources */,
@@ -361,14 +368,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3E08FD761CC7AF62007393CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3E08FD771CC7AF62007393CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3E08FD7B1CC7AF62007393CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
