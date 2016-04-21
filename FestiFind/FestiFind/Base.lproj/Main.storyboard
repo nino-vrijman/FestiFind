@@ -34,7 +34,7 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <rect key="frame" x="50" y="323" width="300" height="30"/>
@@ -43,6 +43,12 @@
                                     <rect key="frame" x="310" y="363" width="183" height="30"/>
                                 </variation>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FestiFind" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-aO-M52">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="118" width="356" height="190"/>
+                                </variation>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJR-pS-xbj">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -51,7 +57,7 @@
                                     <rect key="frame" x="50" y="285" width="300" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="310" y="291" width="183" height="30"/>
+                                    <rect key="frame" x="310" y="325" width="183" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
@@ -60,6 +66,7 @@
                             <mask key="subviews">
                                 <exclude reference="4OD-4h-efT"/>
                                 <exclude reference="H45-Gw-Kd8"/>
+                                <exclude reference="7jh-aO-M52"/>
                                 <exclude reference="bJR-pS-xbj"/>
                             </mask>
                         </variation>
@@ -67,6 +74,7 @@
                             <mask key="subviews">
                                 <include reference="4OD-4h-efT"/>
                                 <include reference="H45-Gw-Kd8"/>
+                                <include reference="7jh-aO-M52"/>
                                 <include reference="bJR-pS-xbj"/>
                             </mask>
                         </variation>
@@ -93,34 +101,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-hd-G8w">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-hd-G8w">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Where are my friends?"/>
+                                <state key="normal" image="FindMyFriends"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="83" width="528" height="51"/>
+                                    <rect key="frame" x="116" y="145" width="200" height="190"/>
                                 </variation>
                                 <connections>
                                     <segue destination="T9g-6H-kfZ" kind="show" id="cQc-4h-Gh7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-DM-lGo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-DM-lGo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="I'm here! banner"/>
+                                <state key="normal" image="FlashingBanner"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="176" width="528" height="51"/>
+                                    <rect key="frame" x="382" y="123" width="237" height="234"/>
                                 </variation>
                                 <connections>
                                     <segue destination="2cn-oD-7K3" kind="show" id="O0U-Oz-dth"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJq-JL-Qa6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJq-JL-Qa6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Join group"/>
+                                <state key="normal" image="JoinGroup"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="683" width="528" height="51"/>
+                                    <rect key="frame" x="107" y="390" width="218" height="199"/>
                                 </variation>
                                 <connections>
                                     <segue destination="dnl-Ix-5uh" kind="show" id="w49-3S-tgh"/>
@@ -158,6 +164,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BYj-dL-3uJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oPz-RG-bHC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="CNe-Sb-mam">
@@ -200,12 +207,15 @@
             <objects>
                 <tableViewController id="dnl-Ix-5uh" customClass="JoinGroupViewController" customModule="FestiFind" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Xq-nu-E5y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1ox-4i-X8J">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ox-4i-X8J" id="kRb-aM-4fz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -247,6 +257,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WqU-HM-Ifk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nTr-0p-qnx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geen GPS kunnen vinden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW0-P9-Jad">
@@ -308,6 +319,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FestiFind" width="385" height="302"/>
+        <image name="FindMyFriends" width="200" height="190"/>
+        <image name="FlashingBanner" width="200" height="190"/>
+        <image name="JoinGroup" width="200" height="190"/>
         <image name="arrowDown" width="800" height="800"/>
         <image name="arrowDown copy" width="800" height="800"/>
     </resources>
