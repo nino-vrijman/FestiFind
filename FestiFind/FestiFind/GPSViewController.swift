@@ -20,9 +20,7 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-
+        //Het opzetten van alles in de locationManager
         if (CLLocationManager.locationServicesEnabled())
         {
             locationManager = CLLocationManager()
@@ -38,7 +36,7 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //Als de locatie manager wordt aangeroepen met een update van de locatie
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         
@@ -48,6 +46,7 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         self.theMap.setRegion(region, animated: true)
         lblmyLocation.text = "Je vrienden in de buurt:";
         let annotation = MKPointAnnotation()
+        //Gebruik van var omdat de lat en long verandert kunnen worden
         var pinCor = CLLocationCoordinate2D(latitude: 51.452816, longitude: 5.480947)
         annotation.title = "Kevin";
         annotation.subtitle = "Bij de waterkraan";
