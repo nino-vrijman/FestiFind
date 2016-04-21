@@ -25,6 +25,7 @@
 		3E08FDB21CC7BE41007393CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDB11CC7BE41007393CB /* Event.swift */; };
 		3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08FDED1CC7F947007393CB /* LoginViewController.swift */; };
 		3E0C9A211CC8D757009B99BD /* JsonSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */; };
+		F5A4425E1CC8EE1B000AB1CA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		3E08FDB11CC7BE41007393CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3E08FDED1CC7F947007393CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E0C9A201CC8D757009B99BD /* JsonSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonSerializer.swift; sourceTree = "<group>"; };
+		F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				3E08FD791CC7AF62007393CB /* Assets.xcassets */,
 				3E08FD7B1CC7AF62007393CB /* LaunchScreen.storyboard */,
 				3E08FD7E1CC7AF62007393CB /* Info.plist */,
+				F5A4425D1CC8EE1B000AB1CA /* MenuViewController.swift */,
 			);
 			path = FestiFind;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				3E08FDEE1CC7F947007393CB /* LoginViewController.swift in Sources */,
 				3E08FD751CC7AF62007393CB /* ViewController.swift in Sources */,
 				3E08FDB21CC7BE41007393CB /* Event.swift in Sources */,
+				F5A4425E1CC8EE1B000AB1CA /* MenuViewController.swift in Sources */,
 				3E08FDAC1CC7BA89007393CB /* EventLocation.swift in Sources */,
 				3E08FDAA1CC7B840007393CB /* GatherPoint.swift in Sources */,
 				3E08FDA41CC7B2BA007393CB /* Location.swift in Sources */,

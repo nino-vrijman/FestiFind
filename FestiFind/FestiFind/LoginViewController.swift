@@ -27,8 +27,9 @@ class LoginViewController: UIViewController {
         let username = tfUsername.text!
         let password = tfPassword.text!
         if (logIn(username, password: password)) {
-            let alertView = UIAlertView(title: "Login succesful", message: "Correct combination of username and password", delegate: nil,cancelButtonTitle: "Proceed")
-            alertView.show()
+            let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("MenuViewController")
+            self.showViewController(vc as! MenuViewController, sender: vc)
+            
         } else {
             let alertView = UIAlertView(title: "Login not succesful", message: "Incorrect combination of username and password", delegate: nil,cancelButtonTitle: "Try again")
             alertView.show()

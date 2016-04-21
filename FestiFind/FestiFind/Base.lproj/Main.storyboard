@@ -80,5 +80,23 @@
             </objects>
             <point key="canvasLocation" x="487.5" y="399"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="r9s-Cb-7X2">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="8Up-NT-XrP" customClass="MenuViewController" customModule="FestiFind" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qio-Up-U9T"/>
+                        <viewControllerLayoutGuide type="bottom" id="daM-1G-Gec"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cqx-dp-Q4D">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9O8-IX-RB1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XrF-8S-Cxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1203" y="399"/>
+        </scene>
     </scenes>
 </document>
