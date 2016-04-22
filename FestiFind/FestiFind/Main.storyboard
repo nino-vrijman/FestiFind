@@ -27,22 +27,6 @@
                                     <action selector="btnLogin_Touch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibw-v4-zfh"/>
                                 </connections>
                             </button>
-                            <!--
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H45-Gw-Kd8">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact">
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="310" y="363" width="183" height="30"/>
-                                </variation>
-                            </textField>
-                            -->
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FestiFind" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-aO-M52">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -57,6 +41,14 @@
                                     <rect key="frame" x="310" y="325" width="183" height="30"/>
                                 </variation>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49f-aP-zga">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="310" y="363" width="183" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -64,6 +56,7 @@
                                 <exclude reference="4OD-4h-efT"/>
                                 <exclude reference="7jh-aO-M52"/>
                                 <exclude reference="bJR-pS-xbj"/>
+                                <exclude reference="49f-aP-zga"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -71,11 +64,13 @@
                                 <include reference="4OD-4h-efT"/>
                                 <include reference="7jh-aO-M52"/>
                                 <include reference="bJR-pS-xbj"/>
+                                <include reference="49f-aP-zga"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="E5f-lK-Yxq"/>
                     <connections>
+                        <outlet property="tfPasswordSecure" destination="49f-aP-zga" id="Vxj-eT-97c"/>
                         <outlet property="tfUsername" destination="bJR-pS-xbj" id="Dr7-KE-j3n"/>
                     </connections>
                 </viewController>
@@ -123,7 +118,7 @@
                                     <rect key="frame" x="107" y="390" width="218" height="199"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="EhN-aK-Rs7" kind="show" id="w49-3S-tgh"/>
+                                    <segue destination="dnl-Ix-5uh" kind="show" id="8ab-Pn-oar"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -209,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="96V-4d-uXN" id="jzx-M8-Azy">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -263,7 +258,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CvS-wJ-tOk" id="1LO-Tr-QKc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -389,24 +384,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuR-H7-fmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="487.5" y="399"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lJQ-4N-Lsi">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EhN-aK-Rs7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2PK-HV-sWk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dnl-Ix-5uh" kind="relationship" relationship="rootViewController" id="AV0-gS-ZWh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4pD-IU-jPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2745" y="1122"/>
         </scene>
     </scenes>
     <resources>
