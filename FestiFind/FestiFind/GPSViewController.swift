@@ -11,10 +11,13 @@ import MapKit
 import CoreLocation
 
 
-class GPSViewController: UIViewController, CLLocationManagerDelegate {
+class GPSViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var theMap: MKMapView!
     @IBOutlet weak var lblmyLocation: UILabel!
+    @IBOutlet weak var tvGroupMembers: UITableView!
+    
+    var groupMembers:Array<User> = []
    
     var locationManager: CLLocationManager!
 
@@ -28,14 +31,22 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
+            
+            tvGroupMembers.delegate = self
+            tvGroupMembers.dataSource = self
+            
+            getGroupMembers()
+            
+            self.tvGroupMembers.reloadData()
         }
-
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     //Als de locatie manager wordt aangeroepen met een update van de locatie
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
@@ -72,5 +83,108 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //  Delegate methods van de UITableView zoals deze ook gebruik worden in een TableViewController
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupMembers.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as UITableViewCell
+        
+        let currentRow = indexPath.row
+        let currentGroupMember = self.groupMembers[currentRow]
+        
+        cell.textLabel?.text = currentGroupMember.name
+        
+        return cell
+    }
+    
+    func getGroupMembers() {
+        let prefs = NSUserDefaults.standardUserDefaults()
+        let groupId:Int = prefs.integerForKey("ACTIVE_GROUP") as Int ?? 0
+        NSLog("Group ID: %ld", groupId)
+        if (groupId == 0) {
+            return
+        }
+        
+        //  Huidige GroupID meesturen
+        let post:NSString = "group_id=\(groupId)"
+        
+        NSLog("Data sent with post: %@", post);
+        
+        let url:NSURL = NSURL(string:"https://www.ninovrijman.nl/cgi-bin/festifind_get_group_members.php")!
+        
+        //  Omzetten naar ASCII zodat het over internet gestuurd kan worden en aanmaken van POST "command"
+        let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
+        
+        let postLength:NSString = String( postData.length )
+        
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = postData
+        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        
+        var reponseError: NSError?
+        var response: NSURLResponse?
+        
+        var urlData: NSData?
+        do {
+            urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
+        } catch let error as NSError {
+            reponseError = error
+            urlData = nil
+        }
+        
+        if ( urlData != nil ) {
+            let res = response as! NSHTTPURLResponse!;
+            
+            NSLog("Response code: %ld", res.statusCode);
+            
+            if (res.statusCode >= 200 && res.statusCode < 300)
+            {
+                let responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
+                
+                NSLog("Response message (JSON): %@", responseData);
+                
+                
+                var jsonData:NSDictionary = [:]
+                //var error: NSError?
+                do {
+                    jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+                } catch {
+                    
+                }
+                
+                //  Een array van dictionaries (die een groupmember) wordt uit de value van de key "eventgroup_members" gehaald.
+                let groupMembersJson:NSArray = jsonData.valueForKey("eventgroup_members") as! NSArray
+                
+                for member in groupMembersJson {
+                    //  De dictionary van een enkele groupmember wordt uitgelezen en omgezet naar een User object.
+                    let userId:String = member.valueForKey("ID") as! String
+                    let userName:String = member.valueForKey("NAME") as! String
+                    let userUsername:String = member.valueForKey("USERNAME") as! String
+                    let userIdAsInt:Int? = Int(userId)
+                    
+                    self.groupMembers.append(User(id: userIdAsInt!, name: userName, username: userUsername, userLocation: UserLocation(longitude: 0.0, latitude: 0.0)))
+                }
+                tvGroupMembers.reloadData()
+                
+            } else {
+                NSLog("Sign in Failed : Connection Failed")
+            }
+        } else {
+            NSLog("Sign in Failed : Connection Failed")
+        }
+        
+    }
+
 
 }

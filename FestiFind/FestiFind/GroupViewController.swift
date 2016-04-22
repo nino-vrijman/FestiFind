@@ -27,6 +27,16 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tvGroupMembers.delegate = self
         tvGroupMembers.dataSource = self
         
+        let userId = getLoggedInUserId()
+        var hasAlreadyJoinedGroup:Bool = false
+        for groupMember in groupMembers {
+            if (groupMember.id == userId) {
+                hasAlreadyJoinedGroup = true
+            }
+        }
+        if (hasAlreadyJoinedGroup) {
+            btnJoinGroup.enabled = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -152,6 +162,10 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             getGroupMembers()
             tvGroupMembers.reloadData()
             btnJoinGroup.enabled = false
+            
+            let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            prefs.setInteger(selectedEventGroup!.id, forKey: "ACTIVE_GROUP")
+            prefs.synchronize()
         } else {
             let alertView = UIAlertView(title: "Join group failed", message: "The group doesn't want you to join, you can try again though ;)", delegate: nil,cancelButtonTitle: "Try again")
             alertView.show()
