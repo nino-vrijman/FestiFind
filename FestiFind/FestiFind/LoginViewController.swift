@@ -9,8 +9,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    //Textfield van username
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
+    //Textfield van het password
     @IBOutlet weak var tfPasswordSecure: UITextField!
     
     override func viewDidLoad() {
@@ -24,6 +26,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Deze methode wordt aangeroepen als op de login knop gedrukt wordt
     @IBAction func btnLogin_Touch(sender: UIButton) {
         let username = tfUsername.text!
         let password = tfPasswordSecure.text!

@@ -11,14 +11,12 @@ import UIKit
 class BannerViewController: UIViewController {
 
     @IBOutlet weak var ivArrow: UIImageView!
-    
+    //In swift is het niet mogelijk om een gif te tonen. De timer zorgt er voor dat de afdeling gaat flikkeren
     var timer = NSTimer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    //    timer.invalidate() // just in case this button is tapped multiple times
-        
-        // start the timer
+        // start the timer met een interval van 0,5 seconde
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
 
@@ -29,10 +27,13 @@ class BannerViewController: UIViewController {
     
     
     func update() {
+        //Kijken of de image al gehidden is
         if(ivArrow.hidden){
+            //de image is hidden, toont de image nu
             ivArrow.hidden = false;
         }
         else{
+            //de image is visible, hide de image nu
             ivArrow.hidden = true;
         }
     }

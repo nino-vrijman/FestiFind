@@ -23,12 +23,13 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Het opzetten van alles in de locationManager
+        //Het opzetten de locationManager
         if (CLLocationManager.locationServicesEnabled())
         {
             locationManager = CLLocationManager()
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            //Hiermee wordt gevraagd of de applicatie altijd de locatie mag ophalen
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
             
@@ -55,15 +56,16 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.theMap.setRegion(region, animated: true)
+        //Het label wordt geset met een andere text. Als de text niet geset wordt weet je als gebruiker dat er geen GPS connectie is gelegd
         lblmyLocation.text = "Je vrienden in de buurt:";
         let annotation = MKPointAnnotation()
-        //Gebruik van var omdat de lat en long verandert kunnen worden
+        //Gebruik van var omdat de lat en long verandert kunnen worden in de toekomst
         var pinCor = CLLocationCoordinate2D(latitude: 51.452816, longitude: 5.480947)
         annotation.title = "Kevin";
         annotation.subtitle = "Bij de waterkraan";
         annotation.coordinate = pinCor
         self.theMap.addAnnotation(annotation)
-        
+        //Tweede persoon aanmaken
         let annotation2 = MKPointAnnotation()
         var pinCor2 = CLLocationCoordinate2D(latitude: 51.450816, longitude: 5.480947)
         annotation2.title = "Nino";
