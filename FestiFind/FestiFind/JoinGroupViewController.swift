@@ -122,6 +122,7 @@ class JoinGroupViewController: UITableViewController {
         var reponseError: NSError?
         var response: NSURLResponse?
         
+        //  Opvangen van de return data die de .php pagina terugstuurt  
         var urlData: NSData?
         do {
             urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
@@ -141,7 +142,8 @@ class JoinGroupViewController: UITableViewController {
                 
                 NSLog("Response message (JSON): %@", responseData);
                 
-                
+                //  De teruggestuurde data is een dictionary in JSON formaat, deze wordt naar NSDictionary gecast zodat er in de code met deze
+                //  gegevens gewerkt kan worden.
                 var jsonData:NSDictionary = [:]
                 //var error: NSError?
                 do {

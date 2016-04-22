@@ -34,6 +34,8 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 hasAlreadyJoinedGroup = true
             }
         }
+        
+        //  Als de huidige gebruiker zich al bij de groep aangemeld heeft mag hij zich niet nog een keer aanmelden
         if (hasAlreadyJoinedGroup) {
             btnJoinGroup.enabled = false
         }
@@ -79,6 +81,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var reponseError: NSError?
         var response: NSURLResponse?
         
+        //  Opvangen van de return data die de .php pagina terugstuurt  
         var urlData: NSData?
         do {
             urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
@@ -98,7 +101,8 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 NSLog("Response message (JSON): %@", responseData);
                 
-                
+                //  De teruggestuurde data is een dictionary in JSON formaat, deze wordt naar NSDictionary gecast zodat er in de code met deze
+                //  gegevens gewerkt kan worden.
                 var jsonData:NSDictionary = [:]
                 //var error: NSError?
                 do {

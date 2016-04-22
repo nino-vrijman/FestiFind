@@ -30,10 +30,12 @@ class LoginViewController: UIViewController {
     @IBAction func btnLogin_Touch(sender: UIButton) {
         let username = tfUsername.text!
         let password = tfPasswordSecure.text!
+        
+        //  Als het inloggen is gelukt dan wordt er naar een nieuw scherm genavigeerd, als dit niet zo is dan krijgt de gebruiker een melding
+        //  te zien en kan hij opnieuw proberen om zijn inloggegevens in te voeren.
         if (logIn(username, password: password)) {
             let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("MenuViewController")
             self.showViewController(vc as! MenuViewController, sender: vc)
-            
         } else {
             let alertView = UIAlertView(title: "Login not succesful", message: "Incorrect combination of username and password", delegate: nil,cancelButtonTitle: "Try again")
             alertView.show()
@@ -41,6 +43,7 @@ class LoginViewController: UIViewController {
     }
     
     func logIn(username : String, password : String) -> Bool {
+        //  Meesturen van username en password
         let post:NSString = "username=\(username)&password=\(password)"
         
         NSLog("Data sent with post: %@", post);
@@ -62,6 +65,7 @@ class LoginViewController: UIViewController {
         var reponseError: NSError?
         var response: NSURLResponse?
         
+        //  Opvangen van de return data die de .php pagina terugstuurt
         var urlData: NSData?
         do {
             urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
@@ -81,19 +85,16 @@ class LoginViewController: UIViewController {
                 
                 NSLog("Response message (JSON): %@", responseData);
                 
-                
+                //  De teruggestuurde data is een dictionary in JSON formaat, deze wordt naar NSDictionary gecast zodat er in de code met deze
+                //  gegevens gewerkt kan worden.
                 var jsonData:NSDictionary = [:]
-                //var error: NSError?
                 do {
                     jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
                 } catch {
                     
                 }
                 
-                
                 let success:NSInteger = jsonData.valueForKey("success") as! NSInteger
-                
-                //[jsonData[@"success"] integerValue];
                 
                 NSLog("Success code (0 = failed, 1 = succeeded): %ld", success);
                 
@@ -108,11 +109,8 @@ class LoginViewController: UIViewController {
                     let userLon:Double = jsonData.valueForKey("location_lon") as! Double
                     
                     let loggedInUser = User(id: userId, name: userName, username: userUsername, userLocation: UserLocation(longitude: userLon, latitude: userLat))
-                    
-                    //let jsonLoggedInUser:String = JSONSerializer.toJson(loggedInUser)
  
                     let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                    //prefs.setObject(jsonLoggedInUser, forKey: "LOGGEDINUSER")
                     prefs.setInteger(loggedInUser.id, forKey: "LOGGEDINUSERID")
                     prefs.synchronize()
                     return true;

@@ -107,6 +107,8 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     }
     
     func getGroupMembers() {
+        //  Ophalen van de huidige groep waarbij de gebruiker zich aangemeld heeft uit de UserDefaults (/ Shared Preferences equivalent 
+        //  van Swift)
         let prefs = NSUserDefaults.standardUserDefaults()
         let groupId:Int = prefs.integerForKey("ACTIVE_GROUP") as Int ?? 0
         NSLog("Group ID: %ld", groupId)
@@ -137,6 +139,7 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         var reponseError: NSError?
         var response: NSURLResponse?
         
+        //  Opvangen van de return data die de .php pagina terugstuurt  
         var urlData: NSData?
         do {
             urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
@@ -156,7 +159,8 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, UITableVie
                 
                 NSLog("Response message (JSON): %@", responseData);
                 
-                
+                //  De teruggestuurde data is een dictionary in JSON formaat, deze wordt naar NSDictionary gecast zodat er in de code met deze
+                //  gegevens gewerkt kan worden.
                 var jsonData:NSDictionary = [:]
                 //var error: NSError?
                 do {
